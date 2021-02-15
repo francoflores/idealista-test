@@ -7,9 +7,9 @@ namespace App\Domain;
 final class Picture
 {
     public function __construct(
-        private int $id,
-        private String $url,
-        private String $quality,
+        public int $id,
+        public String $url,
+        public String $quality,
     ) {
     }
 }

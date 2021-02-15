@@ -1,0 +1,23 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+score:
+  path: /mathScore
+  controller: App\Infrastructure\Api\CalculateScoreController::__invoke
+
+admin:
+  path: /adminAds/{filter}
+  controller: App\Infrastructure\Api\QualityListingController::__invoke
+  defaults:
+    filter: 0
+  requirements:
+    filter: '\d+'
+
+client:
+  path: /clientAds
+  controller: App\Infrastructure\Api\PublicListingController::__invoke
+
+
+
+
